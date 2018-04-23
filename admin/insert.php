@@ -10,7 +10,7 @@
     $name = $description = $price = $image = '';
     $errors = [];
 
-    if(empty($_POST)){
+    if(!empty($_POST)){
      
         
         if(empty($_POST['name'])){
@@ -53,7 +53,7 @@ EOS;
         $stmt->bindValue(':category', $_POST['category']);
         $stmt->execute();
 
-        header("Location: index.php");
+        //header("Location: index.php");
 
     die;
         }
